@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clear-coding-agent-ollama"
+version = "0.1.0"
+description = "Clear coding agent backed by Ollama"
+requires-python = ">=3.10"
+dependencies = [
+    "pytest>=9.0.2",
+]
+
+[project.scripts]
+clear-coding-agent = "clear_coding_agent:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3.5",
+  "ruff>=0.4.4",
+]
+
+[tool.setuptools]
+py-modules = ["clear_coding_agent"]
